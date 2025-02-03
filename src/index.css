@@ -1,1 +1,63 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Karla";
+  src: url("/fonts/Karla-Variable-wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("/fonts/Karla-Italic-Variable-wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("/fonts/static/Karla-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("/fonts/static/Karla-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 500; /* Regular */
+}
+
+h1 {
+  font-family: "Karla", sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+.italic-text {
+  font-family: "Karla", sans-serif;
+  font-style: italic;
+}
+
+.variable-weight {
+  font-family: "Karla", sans-serif;
+  font-weight: 300; /* Light */
+}
+.radio-btn {
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background-size: 100% 100%;;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.radio-btn.selected {
+  background: url("/src/assets/icon-radio-selected.svg") no-repeat center/cover;
+  border-color: transparent;
+}
