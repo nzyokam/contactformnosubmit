@@ -69,14 +69,14 @@ const ContactForm = () => {
 
   return (
     <div className="bg-[#e0f1e7] h-screen w-screen flex justify-center items-center">
-      <div className="bg-white lg:h-[80vh] lg:w-[50vw] sm:h-[90vw] sm:w-[90vw] rounded-xl shadow-md flex justify-center items-center">
+      <div className="bg-white lg:w-[50vw] h-auto sm:w-[85vw] ms:w-[75vw] xs:w-[85vw] rounded-xl shadow-md flex justify-center items-center">
         <div className="w-full h-full m-10 flex justify-center flex-col">
-          <h2 className="text-4xl font-bold mb-10">Contact Us</h2>
+          <h2 className="text-4xl font-bold lg:mb-10">Contact Us</h2>
           <form className="space-y-6 lg:leading-loose lg:tracking-wider text-gray-500" onSubmit={handleSubmit}>
             {/* Name Fields */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block font-medium">First Name <span className="text-[#0a7d69]">*</span></label>
+                <label className="block font-medium mb-4">First Name <span className="text-[#0a7d69]">*</span></label>
                 <input
                   id="firstName"
                   type="text"
@@ -86,7 +86,7 @@ const ContactForm = () => {
                 {errors.firstName && <p className="text-red-500 text-sm pt-2">{errors.firstName}</p>}
               </div>
               <div>
-                <label className="block font-medium">Last Name  <span className="text-[#0a7d69]">*</span></label>
+                <label className="block font-medium mb-4">Last Name  <span className="text-[#0a7d69]">*</span></label>
                 <input
                   id="lastName"
                   type="text"
@@ -99,7 +99,7 @@ const ContactForm = () => {
 
             {/* Email Address */}
             <div>
-              <label className="block font-medium">Email Address  <span className="text-[#0a7d69]">*</span></label>
+              <label className="block font-medium mb-4">Email Address  <span className="text-[#0a7d69]">*</span></label>
               <input
                 id="email"
                 type="email"
@@ -111,29 +111,32 @@ const ContactForm = () => {
 
             {/* Query Type */}
             <div>
-              <label className="block font-medium">Query Type  <span className="text-[#0a7d69]">*</span></label>
-              <div className="sm:flex sm:flex-col lg:flex lg:flex-row lg:space-x-4 ">
-                <label className="flex items-center space-x-2 cursor-pointer border hover:border-[#0a7d69] p-2 pl-6 lg:w-[50%] sm:w-full rounded-lg">
+              <label className="block font-medium mb-4">Query Type  <span className="text-[#0a7d69]">*</span></label>
+              <div className="sm:flex sm:flex-col lg:flex lg:flex-row lg:space-x-4 space-y-4 lg:space-y-0">
+
+                <label className="flex items-center space-x-2 cursor-pointer border hover:border-[#0a7d69] p-2 pl-6 lg:w-[50%]  rounded-lg">
                   <div
                     className={`radio-btn ${selected1 ? "selected" : ""}`}
                     onClick={handleSelect1} 
                   ></div>
                   <span>General Enquiry</span>
                 </label>
-                <label className="flex items-center space-x-2 cursor-pointer border hover:border-[#0a7d69] p-2 pl-6 lg:w-[50%] sm:w-full rounded-lg">
+
+                <label className="flex items-center space-x-2 cursor-pointer border hover:border-[#0a7d69] p-2 pl-6 lg:w-[50%] rounded-lg">
                   <div
                     className={`radio-btn ${selected2 ? "selected" : ""}`}
                     onClick={handleSelect2} 
                   ></div>
                   <span>Support Request</span>
                 </label>
+
               </div>
               {errors.queryType && <p className="text-red-500 text-sm pt-2">{errors.queryType}</p>}
             </div>
 
             {/* Message */}
             <div>
-              <label className="block font-medium">Message  <span className="text-[#0a7d69]">*</span></label>
+              <label className="block font-medium mb-4">Message  <span className="text-[#0a7d69]">*</span></label>
               <textarea
                 id="message"
                 
